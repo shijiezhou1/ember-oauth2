@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Login Page</h2>
+
+  <label for="identification">Login in</label>
+  {{input id="identification" value=login placeholder="Login"}}<br>
+  <label for="password">Password</label>
+  {{input id="password" value=password placeholder="Password" type="password"}}<br>
+  <button class="btn btn-primary" {{action "authenticate"}}>Login</button>
+  <button class="btn btn-success" {{action "logstuff"}} >Show me</button>
+
+  {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+  {{else if successMessage }}
+    <p>{{successMessage}}</p>
+  {{/if}}
+</div>

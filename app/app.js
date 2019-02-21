@@ -9,6 +9,17 @@ const App = Application.extend({
   Resolver
 });
 
+App.initializer({
+  name: 'pass-me',
+  initialize: function( application ){
+    // console.log(application);
+    // application.register( 'pass-me:akxUtil', AkxUtil, { singleton: true } );
+    // application.inject( 'controller', 'akxUtil', 'akx-util:akxUtil' );
+    // application.inject( 'route', 'akxUtil', 'akx-util:akxUtil' );
+    // application.inject( 'component', 'akxUtil', 'akx-util:akxUtil' );
+  }
+});
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;
