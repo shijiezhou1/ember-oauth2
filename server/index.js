@@ -14,8 +14,7 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.get('/students', function (req, res) {
     if (req.headers.authorization !== "Bearer secretcode") {
-      console.log(req.headers.authorization);
-      return res.status(401).send(`Unauthorized   ${JSON.stringify(req.headers)}`);
+      return res.status(401).send(`Unauthorized   ${JSON.stringify(req.headers.authorization)}`);
     }
     return res.status(200).send({
       students: [
@@ -36,7 +35,7 @@ module.exports = function (app) {
   // mocks.forEach(route => route(app));
   // proxies.forEach(route => route(app));
   app.post('/token', function (req, res) {
-    if (req.body.username === 'root' && req.body.password === 'root') {
+    if (req.body.username === 'root' && req.body.password === 'r') {
       res.status(200).send({ 
         access_token: "secretcode",
         successMessage: "Login successful"

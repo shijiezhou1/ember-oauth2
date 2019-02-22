@@ -7,6 +7,7 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
     // host: config.APP.api_host,
   authorize( xhr ) {
     let access_token = this.get( 'session.data.authenticated.access_token' );
+    console.log('in router');
     xhr.setRequestHeader( 'Authorization', `Bearer ${access_token}` );
   }
 });

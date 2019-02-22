@@ -14,7 +14,7 @@ export default Authenticator.extend({
             contentType: 'application/x-www-form-urlencoded',
             crossDomain: true,
             headers: {
-                Authorization: "Basic " + btoa(client_id + ":" + client_secret)
+                Authorization: "Bearer " + btoa(client_id + ":" + client_secret)
             }
         });
     }
