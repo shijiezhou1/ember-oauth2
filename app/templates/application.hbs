@@ -2,8 +2,8 @@
 {{#link-to "index"}}Home{{/link-to}}
 {{#link-to "protected"}}Protected Page{{/link-to}}
 {{#if session.isAuthenticated}}
-  <a id="logout" href="#" {{ action "invalidateSession" }}>Logout</a>
+<a id="logout" href="#" {{ action "invalidateSession" }}>Logout</a>
 {{else}}
-  {{#link-to "login"}}Login{{/link-to}}
+{{#link-to "login"}}Login{{/link-to}}
 {{/if}}
 {{outlet}}
