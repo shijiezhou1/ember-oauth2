@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import Authenticator from 'ember-simple-auth/authenticators/oauth2-password-grant';
 
-// SET YOUR FAVORITE HEADER
 export default Authenticator.extend({
     makeRequest(url, data) {
         var client_id = '12345';

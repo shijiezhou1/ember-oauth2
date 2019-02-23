@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
 export default DS.RESTAdapter.extend(DataAdapterMixin, {
-    // session: service(),
+  // session: service(),
   authorizer: 'authorizer:application',
   // host: config.APP.api_host,
   // authorize( xhr ) {
