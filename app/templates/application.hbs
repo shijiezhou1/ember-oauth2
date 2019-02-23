@@ -1,9 +1,9 @@
 <h2 id="title">Welcome to My Portfolio</h2>
-{{#link-to "index"}}Home{{/link-to}}
-{{#link-to "protected"}}Protected Page{{/link-to}}
-{{#if session.isAuthenticated}}
-<a id="logout" href="#" {{ action "invalidateSession" }}>Logout</a>
-{{else}}
-{{#link-to "login"}}Login{{/link-to}}
-{{/if}}
+    {{#link-to "index"}}Home{{/link-to}}
+    {{#link-to "protected"}}Protected Page{{/link-to}}
+    {{#if session.isAuthenticated}}
+    <a id="logout" href="#" {{ action "invalidateSession" }}>Logout</a>
+    {{else}}
+    {{#link-to "login"}}Login{{/link-to}}
+    {{/if}}
 {{outlet}}
