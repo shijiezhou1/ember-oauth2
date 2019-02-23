@@ -17,6 +17,7 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd ember-oauth2`
 * `npm install`
+* `bower install bootstrap`
 
 ## Running / Development
 

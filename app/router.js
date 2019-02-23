@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('authenticated', { path: '' }, function() {
     // all routes that require the session to be authenticated
   });
+  this.route('protected');
 });
 
 export default Router;
