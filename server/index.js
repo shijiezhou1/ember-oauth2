@@ -24,6 +24,19 @@ module.exports = function (app) {
       ]
     });
   });
+
+  app.get('/protecteds', function (req, res) {
+    if (req.headers.authorization !== "Bearer secretcode") {
+      return res.status(401).send(`Unauthorized`);
+    }
+    return res.status(200).send({
+      students: [
+        { id: 1, name: 'Erik', age: 24 },
+        { id: 2, name: 'Suze', age: 32 },
+        { id: 3, name: 'Jill', age: 18 },
+      ]
+    });
+  });
   // const globSync   = require('glob').sync;
   // const mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
   // const proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);

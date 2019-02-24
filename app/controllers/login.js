@@ -23,9 +23,9 @@ export default Controller.extend({
                 .then(() => {
                     this.set('successMessage', this.session.data.authenticated.successMessage);
                     let _this = this;
-                    Ember.run.later((function() { 
-                        _this.transitionToRoute('protected');
-                    }), 1000);
+                    // Ember.run.later((function() { 
+                    //     _this.transitionToRoute('protected');
+                    // }), 1000);
                 }, (err) => {
                     this.set('errorMessage', err.error || err);
                 });

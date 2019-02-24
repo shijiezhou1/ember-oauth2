@@ -16,12 +16,11 @@ import Route from '@ember/routing/route';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
 export default Route.extend(ApplicationRouteMixin, {
-  
-  model(){
+  beforeModel(){
     if(!this.get('session.isAuthenticated')){
       this.transitionTo('login'); // PLEASE LOGIN
     }else{
-      this.transitionTo('protected'); // REDIRECT WHEN LOGINNED
+      this.transitionTo('protected'); // REDIRECT IF LOGINNED
     }
   },
   actions: {
