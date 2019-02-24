@@ -4,5 +4,6 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Route.extend(AuthenticatedRouteMixin,{
     model() {
         return this.store.findAll('protected');
+        // return this.store.findAll('protected');
     }
 });

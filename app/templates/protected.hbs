@@ -1,3 +1,12 @@
-<h3>Protected</h3>
+<h3>Protected Users Information</h3>
 
-<div>Content is not available now</div>
+<div class="row m-1 bg-primary">
+    <div class="col-3 text-white">Name</div>
+    <div class="col-3 text-white">Age</div>
+</div>
+{{#each model as |protected|}}
+<div class="row m-1 bg-secondary">
+    <div class="col-3 text-white">{{protected.name}}</div>
+    <div class="col-3 text-white">{{protected.age}}</div>
+</div>
+{{/each}}

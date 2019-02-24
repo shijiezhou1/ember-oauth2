@@ -30,7 +30,7 @@ module.exports = function (app) {
       return res.status(401).send(`Unauthorized`);
     }
     return res.status(200).send({
-      students: [
+      protecteds: [
         { id: 1, name: 'Erik', age: 24 },
         { id: 2, name: 'Suze', age: 32 },
         { id: 3, name: 'Jill', age: 18 },
