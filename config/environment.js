@@ -43,6 +43,14 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
   }
 
+  ENV['simple-auth'] = {
+    // authorizer: 'simple-auth-authorizer:devise',
+    authenticators: 'OAuth2PasswordGrant',
+    crossOriginWhitelist:[
+     'http://localhost:3000'
+    ]
+  }
+
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }

@@ -14,7 +14,6 @@ export default Controller.extend({
 
     actions:{
         logstuff(){
-            // this.transitionToRoute('protected');
             console.log('object');
         },
         authenticate() {
